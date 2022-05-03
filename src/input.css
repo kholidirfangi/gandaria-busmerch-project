@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-fixed {
+ @apply z-[999] fixed bg-white backdrop-blur-md bg-opacity-70 dark:bg-slate-900 dark:bg-opacity-50;
+box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.humberger-line {
+ @apply block w-[30px] h-[2px] my-2 bg-black;
+}
+
+.humberger-active span:nth-child(1) {
+ @apply rotate-[44deg];
+}
+
+.humberger-active span:nth-child(2) {
+ @apply scale-0;
+}
+
+.humberger-active span:nth-child(3) {
+ @apply -rotate-45;
+}
+
+.navbar-click {
+@apply text-orange-500 lg:border-b-2 lg:border-b-orange-500 dark:border-b-orange-500 dark:border-b-2 font-semibold; 
+}
+
+#toggle:checked ~ label div.toggle-circle {
+@apply translate-x-3 ml-[3px];
+}
